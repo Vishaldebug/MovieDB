@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Suite" duration-ms="98996" started-at="2020-05-06T18:41:16Z" finished-at="2020-05-06T18:42:55Z">
+    <groups>
+      <group name="cucumber">
+        <method signature="AbstractTestNGCucumberTests.feature(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:Runner.MainRunner@4e9ba398]" name="feature" class="cucumber.api.testng.AbstractTestNGCucumberTests"/>
+        <method signature="AbstractTestNGCucumberTests.feature(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:Runner.MainRunner@6e0e048a]" name="feature" class="cucumber.api.testng.AbstractTestNGCucumberTests"/>
+      </group> <!-- cucumber -->
+    </groups>
+    <test name="Test2" duration-ms="20851" started-at="2020-05-06T18:41:16Z" finished-at="2020-05-06T18:41:37Z">
+      <class name="Runner.MainRunner">
+        <test-method status="PASS" signature="setUpClass()[pri:0, instance:Runner.MainRunner@6e0e048a]" name="setUpClass" is-config="true" duration-ms="603" started-at="2020-05-06T18:41:16Z" finished-at="2020-05-06T18:41:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpClass -->
+        <test-method status="PASS" signature="feature(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:Runner.MainRunner@6e0e048a]" name="feature" duration-ms="19961" started-at="2020-05-06T18:41:17Z" description="Runs Cucumber Feature" data-provider="features" finished-at="2020-05-06T18:41:37Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Movie Mainscreen]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- feature -->
+        <test-method status="PASS" signature="tearDownClass()[pri:0, instance:Runner.MainRunner@6e0e048a]" name="tearDownClass" is-config="true" duration-ms="55" started-at="2020-05-06T18:41:37Z" finished-at="2020-05-06T18:41:37Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownClass -->
+      </class> <!-- Runner.MainRunner -->
+    </test> <!-- Test2 -->
+    <test name="Test1" duration-ms="98996" started-at="2020-05-06T18:41:16Z" finished-at="2020-05-06T18:42:55Z">
+      <class name="Runner.MainRunner">
+        <test-method status="PASS" signature="setUpClass()[pri:0, instance:Runner.MainRunner@4e9ba398]" name="setUpClass" is-config="true" duration-ms="601" started-at="2020-05-06T18:41:16Z" finished-at="2020-05-06T18:41:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpClass -->
+        <test-method status="PASS" signature="feature(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:Runner.MainRunner@4e9ba398]" name="feature" duration-ms="98087" started-at="2020-05-06T18:41:17Z" description="Runs Cucumber Feature" data-provider="features" finished-at="2020-05-06T18:42:55Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Movie Mainscreen]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- feature -->
+        <test-method status="PASS" signature="tearDownClass()[pri:0, instance:Runner.MainRunner@4e9ba398]" name="tearDownClass" is-config="true" duration-ms="75" started-at="2020-05-06T18:42:55Z" finished-at="2020-05-06T18:42:55Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownClass -->
+      </class> <!-- Runner.MainRunner -->
+    </test> <!-- Test1 -->
+  </suite> <!-- Suite -->
+</testng-results>
