@@ -1,5 +1,7 @@
 package Utility;
 
+import java.io.File;
+
 /**
  * 
  * @author Vishal Lad
@@ -12,13 +14,20 @@ package Utility;
 
 import java.io.IOException;
 import java.net.URL;
+import java.util.Date;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.android.AndroidDriver;
 
+import org.apache.commons.io.FileUtils;
+import org.junit.Assert;
 import org.openqa.selenium.By;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.remote.DesiredCapabilities;
+
+
 
 
 public class BaseClass {
@@ -44,10 +53,19 @@ public class BaseClass {
 
 		//Change network speed
 		capabilities.setCapability("networkSpeed", "evdo");
+		
+		try {
+			
+			driver = new AndroidDriver<MobileElement> (new URL("http://127.0.0.1:4723/wd/hub"),capabilities);
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		}	
 
 
-		driver = new AndroidDriver<MobileElement> (new URL("http://127.0.0.1:4723/wd/hub"),capabilities);
+		
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		
 	}
 
 	//Reading types of locators from properties file
@@ -90,25 +108,64 @@ public class BaseClass {
 		}
 		return true;
 	}
+	
+	//Take a screenshots
+	public String captureScreenShot() {
+		
+		Date d = new Date();
+		String screenshot = d.toString().replace(" ", "_").replace(":", "_");
+		File scrFile =((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+		String userDirectory = System.getProperty("user.dir");
+		String destination = userDirectory + "/screenshots/" + screenshot + ".png";
+		try {
+			FileUtils.copyFile(scrFile, new File(destination));
+		} catch (IOException e) {
+
+			e.printStackTrace();
+		}
+		return destination;
+	}
 
 	//Click method
-	public void click(String locatorKey){	
+	public void click(String locatorKey){
+		try {
 		System.out.println("Clicking on - "+locatorKey);
+		Assert.assertTrue((getElement(locatorKey)).isDisplayed());
 		getElement(locatorKey).click();
+		captureScreenShot();
+	}
+	catch(Exception e)
+	{
+		e.printStackTrace();
+	}
 
 	}
 
 	//Type method
 	public void enter(String locatorKey,String inputText){	
+		try {
 		System.out.println("Entering text in the field "+locatorKey);
-		getElement(locatorKey).sendKeys(inputText+"\n");	
+		Assert.assertTrue((getElement(locatorKey)).isDisplayed());
+		getElement(locatorKey).sendKeys(inputText+"\n");
+		captureScreenShot();
+		}
+		catch(Exception e)
+		{
+			e.printStackTrace();
+		}
 	}
 
 
 	//Close method
 	public void close() throws InterruptedException
 	{
+		try {
 		driver.closeApp();
+		}
+		catch(Exception e)
+		{
+			e.printStackTrace();
+		}
 	}
 
 

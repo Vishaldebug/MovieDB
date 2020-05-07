@@ -15,8 +15,7 @@ import cucumber.api.testng.AbstractTestNGCucumberTests;
 @RunWith(Cucumber.class)
 @CucumberOptions(
 		features = {"src/test/java/Featurefile/"},
-		glue={"StepDefination"},
-		//tags= {"@MovieDetail"},
+		glue={"StepDefinition"},
 		plugin={"html:Cucumber-Reports/cucumber-html-report"}
 		)
 

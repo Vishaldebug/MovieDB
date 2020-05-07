@@ -47,14 +47,14 @@ formatter.step({
 });
 formatter.step({
   "line": 10,
-  "name": "user tap on back button",
+  "name": "user taps on back button",
   "keyword": "And "
 });
 formatter.match({
   "location": "MovieDB_Step.user_navigates_to_the_movie_main_screen()"
 });
 formatter.result({
-  "duration": 11768985800,
+  "duration": 16013863900,
   "status": "passed"
 });
 formatter.match({
@@ -67,21 +67,21 @@ formatter.match({
   "location": "MovieDB_Step.i_click_on(String)"
 });
 formatter.result({
-  "duration": 609957700,
+  "duration": 3651991600,
   "status": "passed"
 });
 formatter.match({
   "location": "MovieDB_Step.user_navigates_to_the_details_screen()"
 });
 formatter.result({
-  "duration": 1702090500,
+  "duration": 2030775200,
   "status": "passed"
 });
 formatter.match({
   "location": "MovieDB_Step.user_tap_on_back_button()"
 });
 formatter.result({
-  "duration": 176129900,
+  "duration": 2209221800,
   "status": "passed"
 });
 formatter.scenario({
@@ -108,23 +108,24 @@ formatter.step({
   "keyword": "When "
 });
 formatter.step({
-  "line": 17,
-  "name": "user validate valid search",
-  "keyword": "Then "
-});
-formatter.step({
+  "comments": [
+    {
+      "line": 17,
+      "value": "#Then user validates valid search"
+    }
+  ],
   "line": 18,
   "name": "I enter \"Search_id\" as \"\u0026\u0026\u0026\u0026\"",
   "keyword": "When "
 });
 formatter.step({
   "line": 19,
-  "name": "user validate invalid search",
+  "name": "user validates invalid search",
   "keyword": "Then "
 });
 formatter.step({
   "line": 20,
-  "name": "user tap on back button",
+  "name": "user taps on back button",
   "keyword": "And "
 });
 formatter.match({
@@ -141,14 +142,7 @@ formatter.match({
   "location": "MovieDB_Step.i_enter_as(String,String)"
 });
 formatter.result({
-  "duration": 1332748900,
-  "status": "passed"
-});
-formatter.match({
-  "location": "MovieDB_Step.user_validate_valid_search()"
-});
-formatter.result({
-  "duration": 2014677700,
+  "duration": 3592497000,
   "status": "passed"
 });
 formatter.match({
@@ -165,21 +159,21 @@ formatter.match({
   "location": "MovieDB_Step.i_enter_as(String,String)"
 });
 formatter.result({
-  "duration": 376874700,
+  "duration": 3503328300,
   "status": "passed"
 });
 formatter.match({
   "location": "MovieDB_Step.user_validate_invalid_search()"
 });
 formatter.result({
-  "duration": 1540726100,
+  "duration": 559785800,
   "status": "passed"
 });
 formatter.match({
   "location": "MovieDB_Step.user_tap_on_back_button()"
 });
 formatter.result({
-  "duration": 128239000,
+  "duration": 896162100,
   "status": "passed"
 });
 formatter.scenario({
@@ -213,12 +207,12 @@ formatter.step({
 });
 formatter.step({
   "line": 28,
-  "name": "user tap on back button",
+  "name": "user taps on back button",
   "keyword": "And "
 });
 formatter.step({
   "line": 29,
-  "name": "user close the application",
+  "name": "user closed the application",
   "keyword": "And "
 });
 formatter.match({
@@ -231,7 +225,7 @@ formatter.match({
   "location": "MovieDB_Step.i_click_on(String)"
 });
 formatter.result({
-  "duration": 1003691600,
+  "duration": 2722458100,
   "status": "passed"
 });
 formatter.match({
@@ -244,28 +238,28 @@ formatter.match({
   "location": "MovieDB_Step.i_click_on(String)"
 });
 formatter.result({
-  "duration": 1432942400,
+  "duration": 2840477000,
   "status": "passed"
 });
 formatter.match({
   "location": "MovieDB_Step.verify_user_navigates_to_the_About_screen()"
 });
 formatter.result({
-  "duration": 1424394600,
+  "duration": 704402600,
   "status": "passed"
 });
 formatter.match({
   "location": "MovieDB_Step.user_tap_on_back_button()"
 });
 formatter.result({
-  "duration": 128872400,
+  "duration": 1079771200,
   "status": "passed"
 });
 formatter.match({
   "location": "MovieDB_Step.I_want_to_Close()"
 });
 formatter.result({
-  "duration": 1894333500,
+  "duration": 2479088700,
   "status": "passed"
 });
 });
