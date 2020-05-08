@@ -194,6 +194,11 @@
     <version>6.8.8</version>
     <scope>test</scope>
 </dependency>
+   <dependency>
+        <groupId>com.github.2gis.winium</groupId>
+        <artifactId>winium-webdriver</artifactId>
+        <version>0.1.0-1</version>
+    </dependency>
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>

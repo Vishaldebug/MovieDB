@@ -1,30 +1,30 @@
 @Mainscreen
 Feature: MovieDB Mainscreen
 
-@MovieDetail @Smoketest
+@MovieDetailScreen @Smoketest
 Scenario: User navigates to movie details screen from main movies list.
 
   Given user navigates to the movie main screen
-  And I click on "Movie_id"
-  Then user navigates to the details screen
+  And I click on "Movie"
+  Then user verify navigation to the details screen by text "DESCRIPTION"
   And user taps on back button 
 
 
 @Search @RegressionTest
 Scenario: User search movies filtered by name.
 
-   When I enter "Search_id" as "2020"
-   #Then user validates valid search
-   When I enter "Search_id" as "&&&&"
-   Then user validates invalid search
+   When I enter "Searchtext_box" as "2020"
+   Then user validates valid search
+   When I enter "Searchtext_box" as "&&&&"
+   Then user validates invalid search by message "No movies found for this query"
    And user taps on back button 
    
 @MoreOptions
 Scenario: User navigates to menu options 
 
-    And I click on "Option_xpath"
-    And I click on "About_xpath"
-    Then verify user navigates to the About screen
+    And I click on "Option_button"
+    And I click on "About_button"
+    Then user verify navigation to the About screen by text "ABOUT"
     And user taps on back button 
     And user closed the application
     
